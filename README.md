@@ -2,7 +2,7 @@
   <img src="asset/images/edge-tpu-silva-banner.jpg" alt="edge-tpu-silva">
 </p>
 
-### The power of [`Coral Edge TPU`](https://coral.ai/docs/accelerator/get-started/#requirements) and [`Pycoral`](https://github.com/google-coral/pycoral) all in one place: `edge-tpu-silva`.
+### The power of [`Coral Edge TPU`](https://coral.ai/docs/accelerator/get-started/#requirements) and [`Pycoral`](https://github.com/google-coral/pycoral) all in one place: [`edge-tpu-silva`](https://pypi.org/project/edge-tpu-silva/).
 
 **edge-tpu-silva** is a Python package that simplifies the installation of the Coral TPU USB dependency and ensures compatibility with PyCoral. This package empowers object `detection` capabilities on various edge devices.
 
