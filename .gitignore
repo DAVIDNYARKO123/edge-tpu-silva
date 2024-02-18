@@ -1,0 +1,76 @@
+# Byte-compiled / optimized Python files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# C extension
+*.so
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# Compiled source
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.pyd
+*.pyo
+
+# Temporary files
+*.bak
+*.swp
+*~
+
+# IDE-specific files/directories
+.idea/
+.vscode/
+
+# Virtual environment
+venv/
+env/
+__env__/
+__venv__/
+
+# Logs and databases
+*.log
+*.sqlite
+*.db
+*.sql
+
+# Test coverage
+.coverage
+htmlcov/
+
+# Documentation
+doc/_build/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Sphinx documentation
+docs/_build/
+docs/api/generated/
+
+# PyInstaller
+dist/
+
+# User-specific files
+*.config
+*.ini
+
+# Environment variables file
+.env
+
+# PyCaret artifacts
+*.pkl
+
+# pycache artifacts
+.cache/
+
+# Pytest cache
+.pytest_cache/
