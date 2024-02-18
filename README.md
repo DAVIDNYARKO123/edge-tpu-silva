@@ -58,9 +58,9 @@ labels_path = 'path/to/your/labels.txt'
 process_detection(model_path, input_path, labels_path)
 ```
 
-### Running `process_detect` in the Terminal: Using the Entry Point "silvatpu"
+### Running `process_detection` in the Terminal: Using the Entry Point "silvatpu"
 
-To perform object detection with the `process_detect` function from the command line, you can use the user-friendly entry point `silvatpu`. Here's an example command:
+To perform object detection with the `process_detection` function from the command line, you can use the user-friendly entry point `silvatpu`. Here's an example command:
 
 ```bash
 silvatpu -p det -m path/to/model.tflite -i path/to/input/video.mp4 -l path/to/labels.txt -t 0.5 -v True
@@ -80,7 +80,7 @@ silvatpu -p det -m path/to/model.tflite -i path/to/input/video.mp4 -l path/to/la
 
 ## Dependencies
 
-    Coral TPU USB driver
+    Coral TPU USB drivers
     PyCoral
 
 ## Contribution
