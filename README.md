@@ -28,7 +28,7 @@ pip install edge-tpu-silva
 In order to configure setup tools for Raspberry Pi, run the following command in the terminal after step 1 is completed:
 
 ```bash
-setup-pi-tpu
+silvatpu-pi-setup
 ```
 
 

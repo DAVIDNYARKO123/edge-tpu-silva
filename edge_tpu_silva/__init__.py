@@ -1,2 +1,1 @@
-from .__main__ import silvatpu
-from .deps.detect import process_detection
+from .silva.silva_detect import process_detection
