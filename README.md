@@ -7,7 +7,7 @@
 **edge-tpu-silva** is a Python package that simplifies the installation of the Coral TPU USB dependency and ensures compatibility with PyCoral and Ultralytics. This package empowers object `detection`, `segmentation` and `classification` capabilities on various edge devices.
 
 
-## Installation
+## [Installation](#)
 
 
 ### Step 1: Install edge-tpu-silva
@@ -22,7 +22,7 @@ pip install edge-tpu-silva
 
 ### Step 2: Run Setup Command
 
-# System Compatibility
+### [System Compatibility](#)
 
 This table provides an overview of the compatibility of the system with different devices and operating systems.
 
@@ -48,7 +48,7 @@ silvatpu-linux-setup
 
 ## Usage
 
-### Object Detection Process
+### [Object Detection Process](#)
 
 To perform object detection using the `process_detection` function, you can follow this example:
 
@@ -75,7 +75,7 @@ To perform object detection with the `process_detection` function from the comma
 silvatpu -p det -m path/to/model.tflite -i path/to/input/video.mp4 -z 240 -t 0.5 -v True
 ```
 
-### Object Segmentation Process
+### [Object Segmentation Process](#)
 
 To perform object segmentation using the `process_segmentation` function, you can follow this example:
 
@@ -120,6 +120,7 @@ silvatpu -p seg -m path/to/model.tflite -i path/to/input/video.mp4 -z 192 -t 0.5
 
     Coral TPU USB drivers
     PyCoral
+    Ultralytics
 
 ## Contribution
 Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
