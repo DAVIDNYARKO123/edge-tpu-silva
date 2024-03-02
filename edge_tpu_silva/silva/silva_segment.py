@@ -5,7 +5,7 @@ import cv2
 from ultralytics import YOLO
 
 
-def process_detection(
+def process_segmentation(
     model_path: str,
     input_path: str,
     imgsz: Union[int, Tuple[int, int]],
@@ -14,7 +14,7 @@ def process_detection(
     show: bool = False,
     classes: list[int] = None,
 ):
-    """Run object detection with with edge-tpu-silva
+    """Run object segmentation with with edge-tpu-silva
 
     Args:
         model_path (str): Define a .tflite model
@@ -31,7 +31,7 @@ def process_detection(
 
     # Load a model
     model = YOLO(
-        model=model_path, task="detect", verbose=False
+        model=model_path, task="segment", verbose=False
     )  # Load a official model or custom model
 
     # Run Prediction
@@ -49,36 +49,33 @@ def process_detection(
     start_time = time.time()
     for out in outs:
         img = out.orig_img
+        masks = out.masks
         if verbose:
             print("\n\n-------RESULTS--------")
         objs_lst = []
-        for box in out.boxes:
+        for index, box in enumerate(out.boxes):
+            seg = masks.xy[index]
             obj_cls, conf, bb = (
                 box.cls.numpy()[0],
                 box.conf.numpy()[0],
                 box.xyxy.numpy()[0],
             )
             label = out.names[int(obj_cls)]
-            ol = {
-                "id": obj_cls,
-                "label": label,
-                "conf": conf,
-                "bbox": bb,
-            }
+            ol = {"id": obj_cls, "label": label, "conf": conf, "bbox": bb, "seg": seg}
             objs_lst.append(ol)
 
             if verbose:
                 print(label)
                 print("  id:    ", obj_cls)
                 print("  score: ", conf)
-                print("  bbox:  ", bb)
+                print("  seg:  ", type(seg))
 
         frame_count += 1
         elapsed_time = time.time() - start_time
         fps = frame_count / elapsed_time
 
         if verbose:
-            print("----INFERENCE TIME----")
+            print("\n----INFERENCE TIME----")
             print("FPS: {:.2f}".format(fps))
 
         yield img, objs_lst, fps

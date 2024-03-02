@@ -25,7 +25,9 @@ def get_installed_version(package_name):
 def setup_message():
     current_platform = get_platform()
     edge_tpu_silva_version = get_installed_version("edge-tpu-silva")
-    linux_entry_point_name = "\033[94msilvatpu-linux-setup\033[0m"  # Blue color ANSI escape code
+    linux_entry_point_name = (
+        "\033[94msilvatpu-linux-setup\033[0m"  # Blue color ANSI escape code
+    )
 
     if current_platform == "Linux/Debian":
         message = (

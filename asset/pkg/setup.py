@@ -1,15 +1,16 @@
-from setuptools import setup, find_packages
-from pathlib import Path
 import re
+from pathlib import Path
+
+from setuptools import find_packages, setup
 
 # Read the contents of README.md from the parent directory
-readme_path = Path(__file__).parent.parent.parent / 'README.md'
-with open(readme_path, 'r', encoding='utf-8') as readme_file:
+readme_path = Path(__file__).parent.parent.parent / "README.md"
+with open(readme_path, "r", encoding="utf-8") as readme_file:
     readme_content = readme_file.read()
 
 # Remove image-related HTML tags using regular expressions
-image_regex = re.compile(r'<img[^>]*>')
-filtered_long_description = re.sub(image_regex, '', readme_content)
+image_regex = re.compile(r"<img[^>]*>")
+filtered_long_description = re.sub(image_regex, "", readme_content)
 
 setup(
     name="edge_tpu_silva",
@@ -17,6 +18,7 @@ setup(
     packages=find_packages(),
     install_requires=[
         "opencv-python",
+        "ultralytics",
     ],
     entry_points={
         "console_scripts": [
@@ -26,5 +28,5 @@ setup(
         ],
     },
     long_description=filtered_long_description,
-    long_description_content_type='text/markdown',
+    long_description_content_type="text/markdown",
 )
