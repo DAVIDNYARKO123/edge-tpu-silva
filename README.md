@@ -50,7 +50,8 @@ Example: If you are on a Raspberry Pi 5, run below command in the terminal follo
 ```bash
 silvatpu-linux-setup
 ```
-> **Note:** Please ensure that you have the Coral USB Accelerator connected after installation. If the Coral USB Accelerator was connected during the installation and setup, please disconnect and reconnect it to ensure proper configuration.
+> <span style="color:red">**Note:** Please ensure that you have the `Coral USB Accelerator` connected through `usb 3.0 port (for faster speed)`. If the Coral USB Accelerator was connected during the installation and setup, please disconnect and reconnect it to ensure `proper configuration.`</span>
+
 
 ## Usage
 
@@ -73,7 +74,7 @@ for _, _ in outs:
   pass
 ```
 
-### Running `process_detection` in the Terminal: Using the Entry Point "silvatpu"
+#### Running `process_detection` in the Terminal: Using the Entry Point "silvatpu"
 
 To perform object detection with the `process_detection` function from the command line, you can use the user-friendly entry point `silvatpu`. Here's an example command:
 
@@ -100,7 +101,7 @@ for _, _ in outs:
   pass
 ```
 
-### Running `process_segmentation` in the Terminal: Using the Entry Point "silvatpu"
+#### Running `process_segmentation` in the Terminal: Using the Entry Point "silvatpu"
 
 To perform object segmentation with the `process_segmentation` function from the command line, you can use the user-friendly entry point `silvatpu`. Here's an example command:
 
