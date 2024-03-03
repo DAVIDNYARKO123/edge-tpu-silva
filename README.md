@@ -59,7 +59,7 @@ To unleash the power of object `detection`, `segmentation`, and `classification`
 
 > **NOTE:** Please be aware that the `imgsz` value specified during YOLO export should align with the same value used when defining `imgsz` for any of the processes. Consistency in these settings is crucial for optimal performance.
 
-Explore the capabilities of edge computing with below crafted models using the edge-tpu-silva library.
+Smaller models will run faster but may have lower accuracy, while larger models will run slower but typically have higher accuracy. Explore the capabilities of edge computing with below models using edge-tpu-silva library.
 
 
 | Download Link | Process | Base Model | imgsz          | Object Classes   |
