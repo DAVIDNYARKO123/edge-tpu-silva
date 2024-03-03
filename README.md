@@ -50,6 +50,7 @@ Example: If you are on a Raspberry Pi 5, run below command in the terminal follo
 ```bash
 silvatpu-linux-setup
 ```
+> **Note:** Please ensure that you have the Coral USB Accelerator connected after installation. If the Coral USB Accelerator was connected during the installation and setup, please disconnect and reconnect it to ensure proper configuration.
 
 ## Usage
 
