@@ -156,8 +156,8 @@ for objs_lst, fps in outs:
 
 | Download Link | Process | Base Model | imgsz          | Object Classes   |
 |--------------- |---------|------------|----------------|------------------ |
-| [Download Model](path/to/model.tflite?raw=true) | Detection | YOLOv8n | 320 | All objects in COCO128 |
-| [Download Model](path/to/segmentation_model.tflite?raw=true) | Segmentation | YOLOv8n | 320 | All objects in COCO128 |
+| [Download Model](https://github.com/DAVIDNYARKO123/edge-tpu-silva/blob/main/models/240_yolov8n_full_integer_quant_edgetpu.tflite?raw=true) | Detection | YOLOv8n | 320 | All objects in COCO128 |
+| [Download Model](https://github.com/DAVIDNYARKO123/edge-tpu-silva/blob/main/models/240_yolov8n-seg_full_integer_quant_edgetpu.tflite?raw=true) | Segmentation | YOLOv8n | 320 | All objects in COCO128 |
 
 
 ## Contribution
