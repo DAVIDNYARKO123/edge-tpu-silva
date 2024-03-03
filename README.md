@@ -125,5 +125,5 @@ silvatpu -p seg -m path/to/model.tflite -i path/to/input/video.mp4 -z 192 -t 0.5
 ## Contribution
 Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
 
-Author (c) [2024] [David Nyarko](https://github.com/DAVIDNYARKO123)
+Python Package Index Maintainer(s) (c) [2024] [David Nyarko](https://github.com/DAVIDNYARKO123)
 
