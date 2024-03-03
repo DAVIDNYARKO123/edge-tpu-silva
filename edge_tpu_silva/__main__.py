@@ -94,7 +94,7 @@ def silvatpu():
             classes=args.classes,
         )
 
-        for _, _, _ in outs:
+        for _, _ in outs:
             pass
 
     elif args.process == "cls":
@@ -108,7 +108,7 @@ def silvatpu():
             classes=args.classes,
         )
 
-        for _, _, _ in outs:
+        for _, _ in outs:
             pass
 
     elif args.process == "seg":
@@ -122,7 +122,7 @@ def silvatpu():
             classes=args.classes,
         )
 
-        for _, _, _ in outs:
+        for _, _ in outs:
             pass
 
     else:
@@ -131,7 +131,9 @@ def silvatpu():
             "--Check system and setup instruction(s):\n"
             "   run:    \033[94msilvatpu-sys\033[0m\n\n"
             "--Perform object detection:\n"
-            "   run:    \033[94msilvatpu -p det -m path/to/model.tflite -i path/to/input/video.mp4 -l path/to/labels.txt -t 0.5 -v True -s True\033[0m\n\n"
+            "   run:    \033[94msilvatpu -p det -m path/to/model.tflite -i path/to/input/video.mp4 -t 0.5 -v True -s False\033[0m\n\n"
+            "--Perform object segmentation:\n"
+            "   run:    \033[94msilvatpu -p seg -m path/to/model.tflite -i path/to/input/video.mp4 -t 0.5 -v True -s False\033[0m\n\n"
             "--Install Linux/Debian setup:\n"
             "   run:    \033[94msilvatpu-linux-setup\033[0m\n\n"
         )

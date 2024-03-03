@@ -48,7 +48,6 @@ def process_segmentation(
     frame_count = 0
     start_time = time.time()
     for out in outs:
-        img = out.orig_img
         masks = out.masks
         if verbose:
             print("\n\n-------RESULTS--------")
@@ -78,7 +77,7 @@ def process_segmentation(
             print("\n----INFERENCE TIME----")
             print("FPS: {:.2f}".format(fps))
 
-        yield img, objs_lst, fps
+        yield objs_lst, fps
 
         # Break the loop if 'esc' key is pressed for video or camera
         if cv2.waitKey(1) == 27:

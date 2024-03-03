@@ -4,8 +4,14 @@
 
 ### The power of [`Coral Edge TPU`](https://coral.ai/docs/accelerator/get-started/#requirements) and [`Ultralytics`](https://docs.ultralytics.com/) all in one place: [`edge-tpu-silva`](https://pypi.org/project/edge-tpu-silva/).
 
-**edge-tpu-silva** is a Python package that simplifies the installation of the Coral TPU USB dependency and ensures compatibility with PyCoral and Ultralytics. This package empowers object `detection`, `segmentation` and `classification` capabilities on various edge devices.
+Our **edge-tpu-silva** is a Python package that simplifies the installation of the Coral TPU USB dependency and ensures compatibility with PyCoral and Ultralytics. This package empowers object `detection`, `segmentation` and `classification` capabilities on various edge devices.
 
+## [Hardware Requirement](https://coral.ai/products/accelerator/)
+`Coral USB Accelerator Exclusivity`:
+
+The edge-tpu-silva library is purpose-built for seamless integration with the Coral USB Accelerator. This powerful hardware accelerator is not just a requirement but a strategic choice, unlocking the library's full potential for superior object `detection`, `segmentation` and `classification`.
+
+[Discover the Coral USB Accelerator](https://coral.ai/products/accelerator/) and experience a tailored approach to edge computing with the edge-tpu-silva library.
 
 ## [Installation](#)
 
@@ -16,7 +22,6 @@ To install **edge-tpu-silva**, use the following pip command in a specified pyth
 
 ```bash
 pip install edge-tpu-silva
-
 ```
 
 
@@ -63,7 +68,7 @@ imgsz = 240
 # Run the object detection process
 outs = process_detection(model_path, input_path, imgsz)
 
-for _, _, _ in outs:
+for _, _ in outs:
   pass
 ```
 
@@ -87,11 +92,10 @@ model_path = 'path/to/your/model.tflite'
 input_path = 'path/to/your/input/video.mp4'
 imgsz = 192
 
-
 # Run the object segmentation process
 outs = process_segmentation(model_path, input_path, imgsz)
 
-for _, _, _ in outs:
+for _, _ in outs:
   pass
 ```
 
@@ -104,7 +108,7 @@ silvatpu -p seg -m path/to/model.tflite -i path/to/input/video.mp4 -z 192 -t 0.5
 ```
 
 
-### Process `detection`, `segmentation` and `classification` Function Parameters
+### Process `detection`, `segmentation` and `classification` Function Input Parameters
 
 | Parameter      | Description                                        | Default Value |
 | --------------- | -------------------------------------------------- | ------------- |
@@ -116,8 +120,37 @@ silvatpu -p seg -m path/to/model.tflite -i path/to/input/video.mp4 -z 192 -t 0.5
 | `show`          | Display frame with segmentation.                   | `False`       |
 | `classes`       | Filters predictions to a set of class IDs. | `None`            |
 
-## Dependencies
 
+### Process `detection`, `segmentation` and `classification` Function Output
+
+Each process function yields the following output:
+
+| Output Parameter | Description                                   |
+| ----------------- | --------------------------------------------- |
+| `objs_lst`        | List of objects detected in frame.            |
+| `fps`             | Frames per second (fps) of the processed video. |
+
+Example usage:
+
+```python
+from edge_tpu_silva import process_detection
+
+# Example Usage with Required Parameters
+model_path = 'path/to/your/model.tflite'
+input_path = 'path/to/your/input/video.mp4'
+imgsz = 240
+
+# Run the object detection process
+outs = process_detection(model_path, input_path, imgsz)
+
+for objs_lst, fps in outs:
+    # Access the output parameters as needed
+    print(f"Processed frame with {len(objs_lst)} objects. FPS: {fps}")
+    print("List of object predictions in frame:")
+    print(objs_lst)
+```
+
+## Dependencies
     Coral TPU USB drivers
     PyCoral
     Ultralytics

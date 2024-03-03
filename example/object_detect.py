@@ -8,5 +8,5 @@ imgsz = 240
 # Run the object detection process
 outs = process_detection(model_path, input_path, imgsz)
 
-for _, _, _ in outs:
+for _, _ in outs:
   pass
