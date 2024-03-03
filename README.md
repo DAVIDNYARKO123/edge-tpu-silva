@@ -130,7 +130,7 @@ Each process function yields the following output:
 | Output Parameter | Description                                   |
 | ----------------- | --------------------------------------------- |
 | `objs_lst`        | List of objects detected in frame.            |
-| `fps`             | Frames per second (fps) of the processed video. |
+| `fps`             | Frames per second (fps) of the processed frame. |
 
 Example usage:
 
