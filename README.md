@@ -154,10 +154,17 @@ for objs_lst, fps in outs:
 
 ## Models
 
+To unleash the power of object `detection`, `segmentation`, and `classification` with this library, you'll need an Edge TPU-compatible .tflite model. These models should be exported using [`Ultralytics`](https://docs.ultralytics.com/), ensuring a seamless integration with the edge-tpu-silva library.
+
+> **NOTE:** Please be aware that the `imgsz` value specified during YOLO export should align with the same value used when defining `imgsz` for any of the processes. Consistency in these settings is crucial for optimal performance.
+
+Explore the capabilities of edge computing with below crafted models using the edge-tpu-silva library.
+
+
 | Download Link | Process | Base Model | imgsz          | Object Classes   |
 |--------------- |---------|------------|----------------|------------------ |
-| [Download Model](https://github.com/DAVIDNYARKO123/edge-tpu-silva/blob/main/models/240_yolov8n_full_integer_quant_edgetpu.tflite?raw=true) | Detection | YOLOv8n | 240 | [COCO128](https://github.com/DAVIDNYARKO123/edge-tpu-silva/blob/main/asset/classes/coco128.txt) |
-| [Download Model](https://github.com/DAVIDNYARKO123/edge-tpu-silva/blob/main/models/240_yolov8n-seg_full_integer_quant_edgetpu.tflite?raw=true) | Segmentation | YOLOv8n | 240 | [COCO128](https://github.com/DAVIDNYARKO123/edge-tpu-silva/blob/main/asset/classes/coco128.txt) |
+| [Download Model](https://github.com/DAVIDNYARKO123/edge-tpu-silva/blob/main/models/240_yolov8n_full_integer_quant_edgetpu.tflite?raw=true) | Detection | yolov8n.pt | `240` | [COCO128](https://github.com/DAVIDNYARKO123/edge-tpu-silva/blob/main/asset/classes/coco128.txt) |
+| [Download Model](https://github.com/DAVIDNYARKO123/edge-tpu-silva/blob/main/models/240_yolov8n-seg_full_integer_quant_edgetpu.tflite?raw=true) | Segmentation | yolov8n-seg.pt | `240` | [COCO128](https://github.com/DAVIDNYARKO123/edge-tpu-silva/blob/main/asset/classes/coco128.txt) |
 
 
 ## Contribution
