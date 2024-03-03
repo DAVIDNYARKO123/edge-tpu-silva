@@ -154,7 +154,7 @@ for objs_lst, fps in outs:
 
 ## Models
 
-To unleash the power of object `detection`, `segmentation`, and `classification` with this library, you'll need an Edge TPU-compatible .tflite model. These models should be exported using [`Ultralytics`](https://docs.ultralytics.com/), ensuring a seamless integration with the edge-tpu-silva library.
+To unleash the power of object `detection`, `segmentation`, and `classification` with this library, you'll need an Edge TPU-compatible .tflite model. These models should be exported using [`Ultralytics`](https://docs.ultralytics.com/modes/export/), ensuring a seamless integration with the edge-tpu-silva library.
 
 > **NOTE:** Please be aware that the `imgsz` value specified during YOLO export should align with the same value used when defining `imgsz` for any of the processes. Consistency in these settings is crucial for optimal performance.
 
