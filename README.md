@@ -152,10 +152,13 @@ for objs_lst, fps in outs:
     print(objs_lst)
 ```
 
-## Dependencies
-    Coral TPU USB drivers
-    PyCoral
-    Ultralytics
+## Models
+
+| Download Link | Process | Base Model | imgsz          | Object Classes   |
+|--------------- |---------|------------|----------------|------------------ |
+| [Download Model](path/to/model.tflite?raw=true) | Detection | YOLOv8n | 320 | All objects in COCO128 |
+| [Download Model](path/to/segmentation_model.tflite?raw=true) | Segmentation | YOLOv8n | 320 | All objects in COCO128 |
+
 
 ## Contribution
 Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
