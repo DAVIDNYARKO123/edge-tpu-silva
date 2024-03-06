@@ -13,7 +13,7 @@ The edge-tpu-silva library is purpose-built for seamless integration with the Co
 
 [Discover the Coral USB Accelerator](https://coral.ai/products/accelerator/) and experience a tailored approach to edge computing with the edge-tpu-silva library.
 
-## <span style="color:red">Do This Before Installing the Package:</span>
+## **Do This First Before Installing the Package:**
 
 Be sure to be in a pyenv or a virtual environment. Run the bash code below in your terminal to create and activate a new virtual environment named `.venv`. Ensure you are in the specific directory you want this environment to be installed.
 
