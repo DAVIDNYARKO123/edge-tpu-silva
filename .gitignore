@@ -36,6 +36,8 @@ venv/
 env/
 __env__/
 __venv__/
+.venv
+.conda
 
 # Logs and databases
 *.log
