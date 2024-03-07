@@ -2,10 +2,23 @@
 import os
 import subprocess
 
+import argparse
 from .check import get_platform
 
+def libedgetpu(option):
+    if option == 'max':
+        package_name = 'libedgetpu1-max'
+    else:
+        package_name = 'libedgetpu1-std'
+
+    return package_name
 
 def linux_setup_commands(sys: str = "Linux/Debian"):
+    parser = argparse.ArgumentParser(description='Install libedgetpu package.')
+    parser.add_argument('--speed', choices=['std', 'max'], default='std', help='Choose between libedgetpu1-std or libedgetpu1-max')
+    args = parser.parse_args()
+    opt = libedgetpu(args.speed)
+
     platform = get_platform()
 
     if platform == sys:
@@ -18,7 +31,7 @@ def linux_setup_commands(sys: str = "Linux/Debian"):
                 'echo "deb https://packages.cloud.google.com/apt coral-edgetpu-stable main" | sudo tee /etc/apt/sources.list.d/coral-edgetpu.list',
                 "curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -",
                 "apt-get update",
-                "apt-get install libedgetpu1-std",
+                f"apt-get install {opt}",
                 "python3 -m pip install --extra-index-url https://google-coral.github.io/py-repo/ pycoral~=2.0",
             ]
 
