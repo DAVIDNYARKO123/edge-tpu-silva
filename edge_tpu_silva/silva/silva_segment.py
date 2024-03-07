@@ -1,5 +1,5 @@
 import time
-from typing import Tuple, Union
+from typing import Tuple, Union, List
 
 import cv2
 from ultralytics import YOLO
@@ -12,7 +12,7 @@ def process_segmentation(
     threshold: int = 0.4,
     verbose: bool = True,
     show: bool = False,
-    classes: list[int] = None,
+    classes: List[int] = None,
 ):
     """Run object segmentation with with edge-tpu-silva
 
@@ -23,7 +23,7 @@ def process_segmentation(
         threshold (int, optional): Threshold for detected objects. Defaults to 0.4.
         verbose (bool, optional): Display prints to terminal. Defaults to True.
         show (bool, optional): Display frame with detection. Defaults to False.
-        classes (list[int], optional): Filters predictions to a set of class IDs. Only detections belonging to the specified classes will be returned. Defaults to None.
+        classes (List[int], optional): Filters predictions to a set of class IDs. Only detections belonging to the specified classes will be returned. Defaults to None.
 
     Yields:
         (Gen): frame, objs_lst, fps

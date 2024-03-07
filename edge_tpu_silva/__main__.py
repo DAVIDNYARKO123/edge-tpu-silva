@@ -1,5 +1,5 @@
 import argparse
-from typing import Tuple, Union
+from typing import Tuple, Union, List
 
 from .silva.silva_classify import process_classification
 from .silva.silva_detect import process_detection
@@ -22,13 +22,13 @@ def parse_imgsz(value: str) -> Union[int, Tuple[int, int]]:
             )
 
 
-def parse_classes(value: str) -> list[int]:
+def parse_classes(value: str) -> List[int]:
     try:
-        # Try to parse as a list of integers
+        # Try to parse as a List of integers
         return [int(x) for x in value.split(",")]
     except ValueError:
         raise argparse.ArgumentTypeError(
-            "Invalid value for classes. It should be a comma-separated list of integers."
+            "Invalid value for classes. It should be a comma-separated List of integers."
         )
 
 
