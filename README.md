@@ -13,9 +13,13 @@ The edge-tpu-silva library is purpose-built for seamless integration with the Co
 
 [Discover the Coral USB Accelerator](https://coral.ai/products/accelerator/) and experience a tailored approach to edge computing with the edge-tpu-silva library.
 
-## **Do This First Before Installing the Package:**
+## [Do This Before Installing the Package]()
 
-Be sure to be in a pyenv or a virtual environment. Run the bash code below in your terminal to create and activate a new virtual environment named `.venv`. Ensure you are in the specific directory you want this environment to be installed.
+The package `edge-tpu-silva` is only compactible with `python versions <3.10`. Install specific python version if your python version is not compatible.
+
+>**Example:** For `Raspberry Pi` you can [install specific python version using pyenv](https://github.com/DAVIDNYARKO123/pyenv)
+
+Run the bash code below in your terminal to create and activate a new virtual environment named `.venv`. Ensure you are in the specific directory you want this environment to be installed.
 
 ```bash
 python3 -m venv .venv
@@ -46,9 +50,6 @@ This table provides an overview of the compatibility of the system with differen
 | Raspberry Pi 4        | ✔                  | silvatpu-linux-setup      |
 | Raspberry Pi 3        | ✔                  | silvatpu-linux-setup      |
 | Jetson Nano           | ✔                  | silvatpu-linux-setup      |
-| x86-64                | ✔                  | silvatpu-linux-setup      |
-| Armv7 (32-bit)        | ✔                  | silvatpu-linux-setup      |
-| Armv8 (64-bit)        | ✔                  | silvatpu-linux-setup      |
 | Windows               | ❌                 |                           |
 | macOS                 | ❌                 |                           |
 
@@ -59,6 +60,16 @@ Example: If you are on a Raspberry Pi 5, run below command in the terminal follo
 ```bash
 silvatpu-linux-setup
 ```
+
+The command installs the standard Edge TPU runtime for Linux, running the device at a reduced clock frequency. Alternatively, you can install a version for maximum speed, but be cautious of increased power consumption and device heat. If unsure, stick to the reduced frequency for safety. To install maximum frequency runtime, specify the speed of the setup command to `max`.
+
+```bash
+silvatpu-linux-setup --speed max
+```
+You cannot have both versions of the runtime installed at the same time, but you can switch by simply installing the alternate runtime as shown above
+
+>**Caution:** Using the USB Accelerator at maximum clock frequency can make it dangerously hot. To prevent burn injuries, keep it out of reach or operate it at a reduced clock frequency.
+
 > **Note:** Please ensure that you have the `Coral USB Accelerator` connected through `usb 3.0 port (for faster speed)`. If the Coral USB Accelerator was connected during the installation and setup, please disconnect and reconnect it to ensure `proper configuration.`
 
 
