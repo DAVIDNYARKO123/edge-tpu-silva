@@ -14,8 +14,9 @@ filtered_long_description = re.sub(image_regex, "", readme_content)
 
 setup(
     name="edge_tpu_silva",
-    version="1.0.4",
+    version="1.0.5",
     packages=find_packages(),
+    python_requires='>=3.6, <3.10',
     install_requires=[
         "opencv-python",
         "ultralytics",
