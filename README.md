@@ -23,7 +23,21 @@ The edge-tpu-silva library is purpose-built for seamless integration with the Co
 
 The package `edge-tpu-silva` is only compactible with `python versions <3.10`. Install specific python version if your python version is not compatible.
 
-> **Example:** For `Raspberry Pi` you can [install specific python version using pyenv](https://github.com/DAVIDNYARKO123/pyenv)
+> **Example:** For `Raspberry Pi` you can [Click For instructions](https://github.com/DAVIDNYARKO123/pyenv) on how to install specific python version using pyenv
+
+> **Note:** Python 3.6 to 3.9 is Recommended, Click on link above on how to install [specific python](https://github.com/DAVIDNYARKO123/pyenv) version
+
+> **Note:** Be sure your Raspberry Pi is up to date. To do so, run below command in terminal.
+>
+> ```bash
+> sudo apt-get update
+> ```
+>
+> ```bash
+> sudo apt-get upgrade
+> ```
+
+## [Installation](#)
 
 Run the bash code below in your terminal to create and activate a new virtual environment named `.venv`. Ensure you are in the specific directory you want this environment to be installed.
 
@@ -92,6 +106,9 @@ Smaller models will run faster but may have lower accuracy, while larger models 
 | [Download Model](https://github.com/DAVIDNYARKO123/edge-tpu-silva/blob/main/models/192_yolov8n_full_integer_quant_edgetpu.tflite?raw=true)     | Detection      | yolov8n.pt     | `192` | [COCO128](https://github.com/DAVIDNYARKO123/edge-tpu-silva/blob/main/asset/classes/coco128.txt)   |
 | [Download Model](https://github.com/DAVIDNYARKO123/edge-tpu-silva/blob/main/models/192_yolov8n-seg_full_integer_quant_edgetpu.tflite?raw=true) | Segmentation   | yolov8n-seg.pt | `192` | [COCO128](https://github.com/DAVIDNYARKO123/edge-tpu-silva/blob/main/asset/classes/coco128.txt)   |
 | [Download Model](https://github.com/DAVIDNYARKO123/edge-tpu-silva/blob/main/models/640_yolov8n-cls_full_integer_quant_edgetpu.tflite?raw=true) | Classification | yolov8n-cls.pt | `640` | [ImageNet](https://github.com/DAVIDNYARKO123/edge-tpu-silva/blob/main/asset/classes/imagenet.txt) |
+| [Download Model](https://github.com/DAVIDNYARKO123/edge-tpu-silva/blob/main/models/240_yolov9c_full_integer_quant_edgetpu.tflite?raw=true)     | Detection      | yolov9c.pt     | `240` | [COCO128](https://github.com/DAVIDNYARKO123/edge-tpu-silva/blob/main/asset/classes/coco128.txt)   |
+
+> **NOTE:** The YOLOv9 model, particularly the YOLOv9c.pt version, is substantial in size, which leads to its TensorFlow Lite version also being quite large. As a result, its processing speed on an Edge TPU is comparatively slower.
 
 ## Usage
 
